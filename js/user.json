@@ -1,0 +1,10 @@
+{
+	"location":[
+  {
+	"Loby": document.getElementById("newLoby").value,
+	"Event": document.getElementById("newType").value,
+	"Sub": document.getElementById("newSub").value,
+	"Host": name, 
+	"lat": pos.lat, 
+	"lng": pos.lng});
+  }

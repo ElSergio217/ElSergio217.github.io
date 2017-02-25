@@ -1,0 +1,52 @@
+﻿html, body {
+        height:100%;
+        margin:0;
+		padding:0;
+      }
+      #map {
+        height:100%;
+      } 
+	  
+	  .scrollable-menu {
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+	
+#btn { position: fixed; bottom: 0px; right: 0px; font-size: 20px; font-weight: lighter;}
+
+#comp{ background-color: #034a67;}
+
+@-webkit-keyframes eazy-circle{
+	0%{
+		-webkit-transform:scale(.5);
+	}
+	100%{
+		-webkit-transform:scale(5);
+	}
+}
+
+[data-load='eazy-load']{
+	position:relative;
+	width:24px;
+}
+[data-load='eazy-load']:before,
+[data-load='eazy-load']:after{
+	position:absolute;
+	left:0;
+	width:22px;
+	height:22px;
+	content:"";
+	-webkit-animation:.60s eazy-circle infinite alternate;
+	border:0.5px solid #ffffff;
+	border-radius:100%;
+	box-shadow:0.5px 0.5px 10px o rgba(0,0,0,0.40); 
+}
+[data-load ='eazy-load']:before{
+	margin:1.5px;
+	-webkit-animation-delay:.45s;
+}
+[data-load ='eazy-load']:after{
+	width:26px;
+	height:26px;
+}
