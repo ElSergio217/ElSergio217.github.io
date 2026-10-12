@@ -6,6 +6,14 @@ import * as THREE from 'three';
 import { EffectComposer, Pixelation, Vignette, Bloom } from '@react-three/postprocessing';
 import './index.css';
 
+// Remap legacy absolute texture paths embedded in FBX models to web-safe asset URLs
+THREE.DefaultLoadingManager.setURLModifier((url) => {
+  if (url.includes('brown_eye.png')) {
+    return '/textures/brown_eye.png';
+  }
+  return url;
+});
+
 // Transition Handlers
 const BackgroundTransition = ({ isMuted }) => {
   useFrame((state, delta) => {
